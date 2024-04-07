@@ -33,6 +33,27 @@ def payload_created_booking_dynamic():
     }
     return payload
 
+def payload_update_booking():
+    payload={
+    "firstname" : "visu_visu",
+    "lastname" : "Brown",
+    "totalprice" : 111,
+    "depositpaid" : True,
+    "bookingdates" : {
+        "checkin" : "2018-01-01",
+        "checkout" : "2019-01-01"
+    },
+    "additionalneeds" : "Breakfast"
+    }
+    return payload
+
+
+def payload_patch_partial_update_booking():
+    payload={
+    "firstname" : "visu_visu",
+    "lastname" : "hyd",
+    }
+    return payload
 
 def payload_create_token():
     payload = {

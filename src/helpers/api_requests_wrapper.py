@@ -3,7 +3,7 @@ import json
 
 def get_request(url,auth):
   response=requests.get(url=url,auth=auth)
-  return response.json()
+  return response
 
 def post_request(url,headers,payload,auth,in_json):
     post_response=requests.post(url=url,headers=headers,auth=auth,data=json.dumps(payload))
@@ -23,7 +23,7 @@ def patch_request(url,headers,payload,auth,in_json):
         return patch_response.json()
     return patch_response
 
-def delete_request(url,headers,payload,auth,in_json):
+def delete_request(url,headers,auth,in_json):
     delete_response=requests.delete(url=url,headers=headers,auth=auth)
     if in_json is True:
         return delete_response.json()
