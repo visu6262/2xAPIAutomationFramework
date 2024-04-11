@@ -5,10 +5,9 @@ from src.helpers.api_requests_wrapper import *
 from src.helpers.common_verification import *
 
 import pytest
-import allure
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def create_token():
     respsonce = post_request(url=Apiconstants().url_create_token(),
                              headers=Utils().common_headars_json(),
@@ -21,7 +20,7 @@ def create_token():
     return token
 
 
-@pytest.fixture()
+@pytest.fixture(scope="session")
 def create_booking():
     responce = post_request(url=Apiconstants().url_create_booking(),
                             headers=Utils().common_headars_json(),

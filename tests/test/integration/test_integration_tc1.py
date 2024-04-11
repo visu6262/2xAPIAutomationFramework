@@ -1,14 +1,6 @@
 # Veriry that create booking -> patch retuest - verify taht fisrtname updated or not
 
-from src.constants.api_constants import *
-from src.helpers.api_requests_wrapper import *
-from src.helpers.common_verification import *
-from src.helpers.payload_manager import *
-from src.utils.utils import *
-from src.helpers.codetest import *
-import pytest
-import json
-import allure
+from conftest import *
 
 
 class TestIntegrationCreateBookingPatch(object):

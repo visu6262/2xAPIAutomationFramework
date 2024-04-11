@@ -1,13 +1,6 @@
 # create a booking, Delete the booking with id and verify get request that id is exists or not
 
-from src.constants.api_constants import *
-from src.helpers.api_requests_wrapper import *
-from src.helpers.common_verification import *
-from src.helpers.payload_manager import *
-from src.utils.utils import *
-from src.helpers.codetest import *
-import pytest
-import json
+from conftest import *
 import allure
 
 class TestIntegrationTc2(object):
